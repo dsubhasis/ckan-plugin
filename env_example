@@ -1,0 +1,6 @@
+API_USER=myuser
+API_PASSWORD_HASH=your_generated_hash_here
+DB_USER=user
+DB_PASSWORD=password
+DB_HOST=localhost
+DB_NAME=dbname
