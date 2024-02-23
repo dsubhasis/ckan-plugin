@@ -2,10 +2,13 @@
 FROM python:3.9
 
 # Set the working directory in the container
-WORKDIR /usr/src/app
+
 
 # Install python-dotenv and asyncpg
-RUN pip install fastapi uvicorn python-dotenv asyncpg
+WORKDIR /app
+COPY ./requirements.txt  /app/requirements.txt
+COPY . /app
+RUN pip install  --no-cache-dir --upgrade -r /app/requirements.txt
 
 # Copy the current directory contents into the container at /usr/src/app
 COPY . .
